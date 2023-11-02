@@ -1,0 +1,2 @@
+Repository 생성 시 README.md 생성을 Default로
+설정해버려서 만든 새로운 txt file입니다..
