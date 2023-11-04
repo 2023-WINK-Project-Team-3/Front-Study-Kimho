@@ -5,24 +5,26 @@
 // const Hello = () => {
 //     // lambda expression.
 // }
-import World from "./World";
 import styles from "./Hello.module.css";
 
 export default function Hello() {
+  function showName() {
+    console.log("KimHo");
+  }
+  // (함수명+괄호): 값 반환
+  // (함수명): 함수 실행 (콜백)
+
+  function showText(e) {
+    console.log(e.target.value);
+  }
+
   return (
-    <div>
-      <h1
-        style={{
-          color: "#f00",
-          border: "2px solid #111",
-          marginTop: "10px",
-          opacity: 1,
-        }}
-      >
-        Wink Project
-      </h1>
-      <World />
-      <div className={styles.box} />
-    </div>
+    <>
+      <h1>Welcome to Wink</h1>
+      <button onClick={showName}>Name</button>
+      <button onClick={() => console.log("Kimho2")}>Age</button>
+      <br />
+      <input type="text" onChange={(e) => showText(e)} />
+    </>
   );
 }
