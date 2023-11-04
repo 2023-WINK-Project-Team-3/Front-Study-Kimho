@@ -1,15 +1,18 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import Header from "./component/Header";
 import Hello from "./component/Hello";
+import List from "./component/List";
+import Day from "./component/Day";
 //import styles from "./component/Hello.module.css";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Hello age={10} />
-        <Hello age={20} />
-        <Hello age={30} />
+        <Header />
+        <List />
+        <Day />
       </div>
     </>
   );
