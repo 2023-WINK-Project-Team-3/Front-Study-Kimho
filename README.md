@@ -11,4 +11,4 @@ No Pain No Gain !
 <2023.11.5>
 
 - Create new React Project on Github repository.
-- JS, CSS, components, useState(setter?), handling events, map iterator, router.
+- JS, CSS, components, useState(setter?), handling events, map iterator. Router section is not yet.
