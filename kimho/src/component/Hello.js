@@ -6,25 +6,32 @@
 //     // lambda expression.
 // }
 import styles from "./Hello.module.css";
+import { useState } from "react";
+import "./USerName";
+import UserName from "./USerName";
 
-export default function Hello() {
-  function showName() {
-    console.log("KimHo");
-  }
-  // (함수명+괄호): 값 반환
-  // (함수명): 함수 실행 (콜백)
+export default function Hello(props) {
+  // props are read-only fields.
+  const [name, setName] = useState("Kim");
+  const [age, setAge] = useState(props.age);
+  const msg = age >= 19 ? "Adult" : "Minor";
 
-  function showText(e) {
-    console.log(e.target.value);
+  function changeName() {
+    //document.getElementById("name").innerText += name;
+    setName(name === "Kim" ? "Ho" : "Kim");
+    setAge(age + 1);
   }
 
   return (
     <>
       <h1>Welcome to Wink</h1>
-      <button onClick={showName}>Name</button>
-      <button onClick={() => console.log("Kimho2")}>Age</button>
-      <br />
-      <input type="text" onChange={(e) => showText(e)} />
+      <h2> Value of The Component</h2>
+      <h3 id="name">{name}</h3>
+      <h3>
+        {age} old : {msg}
+      </h3>
+      <UserName name={name} />
+      <button onClick={() => changeName()}>Click</button>
     </>
   );
 }
