@@ -7,8 +7,6 @@
 // }
 import styles from "./Hello.module.css";
 import { useState } from "react";
-import "./USerName";
-import UserName from "./USerName";
 
 export default function Hello(props) {
   // props are read-only fields.
@@ -30,7 +28,6 @@ export default function Hello(props) {
       <h3>
         {age} old : {msg}
       </h3>
-      <UserName name={name} />
       <button onClick={() => changeName()}>Click</button>
     </>
   );
