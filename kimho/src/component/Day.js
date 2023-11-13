@@ -1,5 +1,21 @@
 import dummy from "../db/data.json";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
+
+const TableItem = styled.td`
+  color: blue;
+  background-color: skyBlue;
+  display: inline-box;
+  font-size: 20px;
+`;
+
+const Title = styled.td`
+  color: blue;
+  background-color: skyBlue;
+  display: inline-box;
+  margin: 20px auto;
+  font-size: 50px;
+`;
 
 export default function Day() {
   const day = useParams().day;
@@ -7,14 +23,14 @@ export default function Day() {
 
   return (
     <>
-      <h2>Day: {day}</h2>
+      <Title>Day: {day}</Title>
       <table>
         <tbody>
           {wordList.map((word) => (
             <tr key={word.id}>
-              <td>{word.id}</td>
-              <td>{word.day}</td>
-              <td>{word.content}</td>
+              <TableItem>{word.id}</TableItem>
+              <TableItem>{word.day}</TableItem>
+              <TableItem>{word.content}</TableItem>
             </tr>
           ))}
         </tbody>
